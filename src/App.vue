@@ -1,14 +1,14 @@
 <template>
-  <SignIn />
+  <QuizQuestion />
 </template>
 
 <script>
-import SignIn from './pages/SignIn.vue'
+import QuizQuestion from './pages/QuizQuestion.vue'
 
 export default {
   name: 'App',
   components: {
-    SignIn
+    QuizQuestion
   }
 }
 </script>
