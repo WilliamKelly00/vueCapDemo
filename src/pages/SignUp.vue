@@ -6,12 +6,12 @@
         <input v-model="email" type="text" />
         <label>Password:</label>
         <input v-model="password" type="password" />
-        <button>Sign In</button>
         <button>Sign Up</button>
+        <button>Sign In</button>
 
         <div>
-            <button>Sign In with Google</button>
-            <button>Sign In with Facebook</button>
+            <button>Sign Up with Google</button>
+            <button>Sign Up with Facebook</button>
         </div>
     </div>
 </template>

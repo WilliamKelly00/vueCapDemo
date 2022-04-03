@@ -1,5 +1,5 @@
 <template>
-  <SignIn msg="Testing components with Vue!" />
+  <SignIn />
 </template>
 
 <script>
