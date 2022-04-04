@@ -2,12 +2,14 @@
     <div id="quiz">
         <div v-if="loading" class="loading">Loading...</div>
         <h1>{{question}}</h1>
-        <ul>
-            <li v-for="(option, index) in options" :key="option">
-                <input type="radio" :id="index" :value="option" v-model="selectedOption">
-                <label :for="index">{{option}}</label>
-            </li>
-        </ul>
+
+        <div v-for="(option, index) in options" :key="option">
+          <input type="radio" name="btn" :id="index" :value="option" v-model="chosen"/>
+          <label :for="index">{{option}}</label>
+        </div>
+
+        <button @click="submit">Submit</button>
+
     </div>
 </template>
 
@@ -19,6 +21,7 @@ export default {
       question: null,
       options: null,
       answer: null,
+      chosen: null,
     }
   },
 
@@ -46,9 +49,18 @@ export default {
             
         })
     },
+    submit(e) {
+        e.preventDefault();
+        if (this.chosen === this.answer) {
+          alert('Correct!');
+        } else {
+          alert('Wrong!');
+        }
 
-    },
+    }
+  }
 }
+
 </script>
 
 <style>
